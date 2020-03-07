@@ -1,0 +1,13 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Build & Test') {
+         steps {
+            git 'git@github.com:EduardoGFreitas/forum-alura.git'
+
+            sh "mvn clean test"
+         }
+      }
+   }
+}
