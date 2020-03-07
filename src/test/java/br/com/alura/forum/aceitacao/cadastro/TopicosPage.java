@@ -3,7 +3,7 @@ package br.com.alura.forum.aceitacao.cadastro;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+	
 public class TopicosPage {
 
 	private ChromeDriver browser;
@@ -11,7 +11,8 @@ public class TopicosPage {
 	public TopicosPage(ChromeDriver browser) {
 		this.browser = browser;
 	}
-
+	
+	
 	public CadastroPage clicarNoLinkDeCadastro() {
 		WebElement linkDeCadastro = browser.findElement(By.linkText("CADASTRE-SE"));
 		linkDeCadastro.click();
