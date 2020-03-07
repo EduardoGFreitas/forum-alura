@@ -15,6 +15,11 @@ public class UsuarioService implements UserDetailsService {
 	@Autowired
 	private UsuarioDao usuarioDao;
 	
+	public UsuarioService(UsuarioDao usuarioDao) {
+		this.usuarioDao = usuarioDao;
+	}
+
+	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Usuario encontrado = usuarioDao.buscarPorEmail(email);
