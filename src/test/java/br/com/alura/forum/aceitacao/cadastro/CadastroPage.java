@@ -1,5 +1,6 @@
 package br.com.alura.forum.aceitacao.cadastro;
 
+import org.junit.Ignore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +12,8 @@ public class CadastroPage {
 	public CadastroPage(ChromeDriver browser) {
 		this.browser = browser;
 	}
-
+	
+	@Ignore
 	public void preencheFormulario(String nome, String email, String senha) {
 		WebElement campoDeNome = browser.findElement(By.name("nome"));
 		campoDeNome.sendKeys(nome);
@@ -26,6 +28,7 @@ public class CadastroPage {
 		campoDeConfirmacaoDeSenha.sendKeys(senha);
 	}
 
+	@Ignore
 	public PaginaLogadaPage submeteCadastro() {
 		browser.findElement(By.className("btn-login")).click();
 		return new PaginaLogadaPage(browser);
